@@ -3,7 +3,7 @@
 */
 
 /**
- * @param {Number} arr - an array that contains 2 or more numbers
+ * @param {Object[]} arr - an array that contains 2 or more numbers
  */
 
 function cariMedian(arr) {
