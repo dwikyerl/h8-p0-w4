@@ -22,7 +22,7 @@ function cariModus(arr) {
   if (totalNumber === 1) return -1;
 
   // set mode and maximum frequencey
-  let mode = undefined;
+  let mode;
   let maxFrequency = 0;
 
   for (let num in modeObj) {
@@ -30,7 +30,7 @@ function cariModus(arr) {
     // if the current number frequency greater than 1 and 
     // greater than current maximum frequency then assign it
     if (modeObj[num] > 1 && modeObj[num] > maxFrequency) {
-      mode = num;
+      mode = +num;
       maxFrequency = modeObj[num];
     }
   }
