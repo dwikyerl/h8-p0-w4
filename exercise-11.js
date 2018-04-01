@@ -3,6 +3,9 @@
 */
 
 function changeMe(arr) {
+  const now = new Date();
+  const thisYear = now.getFullYear();
+
   for (let i = 0; i < arr.length; i++) {
     let output = {};
     for (let j = 0; j < arr[0].length; j++) {
@@ -18,7 +21,7 @@ function changeMe(arr) {
           break;
         case 3:
           let birthYear = arr[i][j];
-          output.age = birthYear ? 2018 - birthYear : "Invalid Birth Year";
+          output.age = birthYear &&  birthYear <= thisYear? thisYear- birthYear : "Invalid Birth Year";
           break;
       }
     }
