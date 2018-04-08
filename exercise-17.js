@@ -4,8 +4,8 @@
 
 function totalDigitRekursif(angka) {
   if (!angka) return 0;
-  let str = "" + angka;
-  return parseInt(str[0]) + totalDigitRekursif(parseInt(str.slice(1)));
+  const str = `${angka}`;
+  return parseInt(str[0], 10) + totalDigitRekursif(parseInt(str.slice(1), 10));
 }
 
 // TEST CASES

@@ -10,13 +10,16 @@ function cariModus(arr) {
   const modeObj = {};
 
   // loop through the array an count each number appearance
-  for (let num of arr) {
+  arr.forEach(num => {
     if (!modeObj[num]) modeObj[num] = 0;
-    modeObj[num]++;
-  }
+    modeObj[num] += 1;
+  });
+
+  // all unique numbers array
+  const numbers = Object.keys(modeObj);
 
   // total unique numbers in the array
-  const totalNumber = Object.keys(modeObj).length;
+  const totalNumber = numbers.length;
 
   // if there is only one number in array return -1;
   if (totalNumber === 1) return -1;
@@ -25,17 +28,16 @@ function cariModus(arr) {
   let mode;
   let maxFrequency = 0;
 
-  for (let num in modeObj) {
-
-    // if the current number frequency greater than 1 and 
+  numbers.forEach(num => {
+    // if the current number frequency greater than 1 and
     // greater than current maximum frequency then assign it
     if (modeObj[num] > 1 && modeObj[num] > maxFrequency) {
       mode = +num;
       maxFrequency = modeObj[num];
     }
-  }
+  });
 
-  // if mode is undefined because each number only appear once return -1 
+  // if mode is undefined because each number only appear once return -1
   // otherwise return the mode
   return mode === undefined ? -1 : mode;
 }

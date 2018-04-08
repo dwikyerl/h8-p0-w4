@@ -6,9 +6,10 @@ function changeMe(arr) {
   const now = new Date();
   const thisYear = now.getFullYear();
 
-  for (let i = 0; i < arr.length; i++) {
-    let output = {};
-    for (let j = 0; j < arr[0].length; j++) {
+  for (let i = 0; i < arr.length; i += 1) {
+    const output = {};
+    for (let j = 0; j < arr[0].length; j += 1) {
+      const birthYear = arr[i][j];
       switch (j) {
         case 0:
           output.firstName = arr[i][j];
@@ -20,9 +21,9 @@ function changeMe(arr) {
           output.gender = arr[i][j];
           break;
         case 3:
-          let birthYear = arr[i][j];
-          output.age = birthYear &&  birthYear <= thisYear? thisYear- birthYear : "Invalid Birth Year";
+          output.age = birthYear && birthYear <= thisYear ? thisYear - birthYear : 'Invalid Birth Year';
           break;
+        default:
       }
     }
     console.log(`${i + 1}. ${output.firstName} ${output.lastName}: `);
@@ -31,7 +32,7 @@ function changeMe(arr) {
 }
 
 // TEST CASES
-changeMe([["Christ", "Evans", "Male", 1982], ["Robert", "Downey", "Male"]]);
+changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]);
 // 1. Christ Evans:
 // { firstName: 'Christ',
 //   lastName: 'Evans',

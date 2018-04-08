@@ -11,7 +11,7 @@ function fpb(angka1, angka2) {
   const minNum = Math.min(angka1, angka2);
   let biggestFactor = 1;
 
-  for (let i = 1; i < minNum; i++) {
+  for (let i = 1; i < minNum; i += 1) {
     if (angka1 % i === 0 && angka2 % i === 0) {
       if (i > biggestFactor) biggestFactor = i;
     }

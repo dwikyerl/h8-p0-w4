@@ -7,14 +7,12 @@
  */
 
 function angkaPrima(angka) {
-  if(angka <= 1) return false;
+  if (angka <= 1) return false;
 
   const limit = Math.floor(angka / 2);
 
-  for (let i = 2; i <= limit; i++) {
-    if (angka % i === 0) {
-      return false;
-    }
+  for (let i = 2; i <= limit; i += 1) {
+    if (angka % i === 0) return false;
   }
 
   return true;

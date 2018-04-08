@@ -1,0 +1,27 @@
+{
+  "name": "h8-p0-w4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercise-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwikyerl/h8-p0-w4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwikyerl/h8-p0-w4/issues"
+  },
+  "homepage": "https://github.com/dwikyerl/h8-p0-w4#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.11.1"
+  }
+}

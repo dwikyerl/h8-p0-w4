@@ -8,9 +8,9 @@
 
 function tukarBesarKecil(kalimat) {
   const arrSentence = kalimat.split('');
-  
-  for (let i = 0; i < arrSentence.length; i++) {
-    let currentLetter = arrSentence[i];
+
+  for (let i = 0; i < arrSentence.length; i += 1) {
+    const currentLetter = arrSentence[i];
     if (/[A-Z]/.test(currentLetter)) {
       arrSentence[i] = currentLetter.toLowerCase();
     } else if (/[a-z]/.test(currentLetter)) {

@@ -4,10 +4,10 @@
 
 function urutkanAbjad(str) {
   const arr = str.split('');
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
+  for (let i = 0; i < arr.length; i += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
       if (arr[i] < arr[j]) {
-        let temp = arr[i];
+        const temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
       }
@@ -15,7 +15,6 @@ function urutkanAbjad(str) {
   }
   return arr.join('');
 }
-
 
 // TEST CASES
 console.log(urutkanAbjad('hello')); // 'ehllo'

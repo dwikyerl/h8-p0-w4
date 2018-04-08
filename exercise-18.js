@@ -3,13 +3,11 @@
 */
 
 function kaliTerusRekursif(angka) {
-  let str = "" + angka;
+  const str = `${angka}`;
 
   if (str.length === 1) return angka;
 
-  return kaliTerusRekursif(
-    parseInt(str[0]) * kaliTerusRekursif(parseInt(str.slice(1)))
-  );
+  return kaliTerusRekursif(parseInt(str[0], 10) * kaliTerusRekursif(parseInt(str.slice(1), 10)));
 }
 
 // TEST CASES
