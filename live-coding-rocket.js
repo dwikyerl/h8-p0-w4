@@ -24,24 +24,16 @@ Dilarang menggunakan built-in function:
 function arrayMerge(firstData, secondData) {
   if (firstData.length === 0 && secondData.length === 0) return [];
 
-  const result = [];
-
   for (let i = 0; i < firstData.length; i += 1) {
-    const data = firstData[i];
     for (let j = 0; j < secondData.length; j += 1) {
-      if (data === secondData[j]) {
+      if (secondData[j] === firstData[i]) {
         secondData.splice(j, 1);
+        break;
       }
     }
-
-    result.push(data);
   }
 
-  for (let i = 0; i < secondData.length; i += 1) {
-    result.push(secondData[i]);
-  }
-
-  return result;
+  return firstData.concat(secondData);
 }
 
 // Test cases
